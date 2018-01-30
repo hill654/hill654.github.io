@@ -29,12 +29,12 @@ var serial = {};
 
   serial.Port.prototype.connect = function() {
     let readLoop = () => {
-      this.device_.transferIn(5, 64).then(result => {
-        this.onReceive(result.data);
-        readLoop();
-      }, error => {
-        this.onReceiveError(error);
-      });
+      // this.device_.transferIn(5, 64).then(result => {
+      //   this.onReceive(result.data);
+      //   readLoop();
+      // }, error => {
+      //   this.onReceiveError(error);
+      // });
     };
 
     return this.device_.open()
